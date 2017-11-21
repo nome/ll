@@ -6,6 +6,10 @@ before_all do |env|
   env.response.content_type = "application/json"
 end
 
+get "/" do |env|
+  { "message" => "/api/v1/message" }.to_json
+end
+
 get "/api/v1/message" do |env|
   { "hello" => "world" }.to_json
 end
